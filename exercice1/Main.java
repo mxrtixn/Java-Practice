@@ -5,7 +5,7 @@ public class Main {
         CompteBancaire compte = new CompteBancaire(100);
 
         // Affichage du solde initial
-        System.out.println("Solde initial : " + compte.getSolde() + "€");
+        System.out.println("Solde initial : " + compte.getSolde() + "MAD");
 
         // Déposer 50€
         compte.deposer(50);
@@ -17,6 +17,6 @@ public class Main {
         compte.retirer(150);
 
         // Affichage du solde final
-        System.out.println("Solde final : " + compte.getSolde() + "€");
+        System.out.println("Solde final : " + compte.getSolde() + "MAD");
     }
 }

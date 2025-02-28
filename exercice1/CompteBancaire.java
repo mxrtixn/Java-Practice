@@ -30,7 +30,7 @@ public class CompteBancaire {
     public void deposer(double montant) {
         if (montant > 0) {
             solde += montant;
-            System.out.println(montant + "€ déposé. Nouveau solde : " + solde + "€");
+            System.out.println(montant + "MAD déposé. Nouveau solde : " + solde + "MAD");
         } else {
             System.out.println("Montant invalide pour le dépôt.");
         }
@@ -40,7 +40,7 @@ public class CompteBancaire {
     public void retirer(double montant) {
         if (montant > 0 && montant <= solde) {
             solde -= montant;
-            System.out.println(montant + "€ retiré. Nouveau solde : " + solde + "€");
+            System.out.println(montant + "MAD retiré. Nouveau solde : " + solde + "MAD");
         } else {
             System.out.println("Retrait impossible. Solde insuffisant ou montant invalide.");
         }
