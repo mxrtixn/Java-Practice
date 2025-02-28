@@ -4,45 +4,26 @@ public class CompteBancaire {
 
     // Constructeur
     public CompteBancaire(double montantInitial) {
-        if (montantInitial >= 0) {
-            this.solde = montantInitial;
-        } else {
-            System.out.println("Montant initial invalide, solde mis à 0.");
-            this.solde = 0;
-        }
+        this.solde = montantInitial;
     }
 
-    // Accesseur (getter)
+    // Méthode pour obtenir le solde
     public double getSolde() {
         return solde;
     }
 
-    // Mutateur (setter) avec vérification
-    public void setSolde(double solde) {
-        if (solde >= 0) {
-            this.solde = solde;
-        } else {
-            System.out.println("Le solde ne peut pas être négatif.");
-        }
-    }
-
-    // Déposer de l'argent
+    // Méthode pour déposer de l'argent
     public void deposer(double montant) {
-        if (montant > 0) {
-            solde += montant;
-            System.out.println(montant + "MAD déposé. Nouveau solde : " + solde + "MAD");
-        } else {
-            System.out.println("Montant invalide pour le dépôt.");
-        }
+        solde += montant;
     }
 
-    // Retirer de l'argent
+    // Méthode pour retirer de l'argent
     public void retirer(double montant) {
-        if (montant > 0 && montant <= solde) {
+        if (solde >= montant) {
             solde -= montant;
-            System.out.println(montant + "MAD retiré. Nouveau solde : " + solde + "MAD");
         } else {
-            System.out.println("Retrait impossible. Solde insuffisant ou montant invalide.");
+            System.out.println("Solde insuffisant !");
         }
     }
 }
+
