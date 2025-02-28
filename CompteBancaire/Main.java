@@ -1,4 +1,4 @@
-package exercice1;
+package CompteBancaire;
 public class Main {
     public static void main(String[] args) {
         // Création d'un compte bancaire avec un solde initial de 100€
